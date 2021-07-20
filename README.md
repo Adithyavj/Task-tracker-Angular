@@ -36,3 +36,8 @@ Some of the basic angular CLI commands are:
 `ng generate component <my-component>`
 ## 4.To create a new service
 `ng generate service <my-service>`
+
+## 5.Here we are using a fake json-server as backend
+`npm install -g json-server`
+For starting the server,
+`json-server --watch db.json`
