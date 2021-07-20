@@ -38,10 +38,16 @@ export class TaskService {
     return this.http.delete<Task>(url);
   }
 
-  // POST:
+  // PUT:
   updateTaskReminder(task: Task): Observable<Task> {
     // for updating the reminder in db
     const url = `${this.apiUrl}/${task.id}`;
     return this.http.put<Task>(url, task, httpOptions);
+  }
+
+  // POST:
+  addTask(task: Task): Observable<Task> {
+    // for inserting new value to Task in db
+    return this.http.post<Task>(this.apiUrl, task, httpOptions);
   }
 }
