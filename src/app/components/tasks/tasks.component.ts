@@ -27,4 +27,11 @@ export class TasksComponent implements OnInit {
       () => this.tasks = this.tasks.filter(t => t.id !== task.id)
     )
   }
+
+  toggleReminder(task: Task){
+    // on double clicking the task, its reminder gets set opposite to what it currently is
+    // double click - turn on/turn off reminder
+    task.reminder  = !task.reminder;
+    console.log(task.reminder);
+  }
 }

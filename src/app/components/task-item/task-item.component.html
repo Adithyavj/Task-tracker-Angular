@@ -1,4 +1,8 @@
-<div [ngClass]="{reminder: task.reminder}" class="task">
+<!-- if task.reminder is true, apply reminder styles to the div -->
+<!-- on clicking the fa-icon X mark - call onDelete method and pass clicked task as argument. This will delete the task using it's id -->
+<!-- h3- displays the task text, p - displays the day -->
+<!-- on double clicking the task, we can toggle -->
+<div [ngClass]="{reminder: task.reminder}" class="task" (dblclick)="onToggle(task)">
     <h3>{{task.text}}
         <fa-icon 
             (click)="onDelete(task)" 
