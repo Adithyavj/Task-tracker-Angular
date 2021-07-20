@@ -32,6 +32,8 @@ export class TasksComponent implements OnInit {
     // on double clicking the task, its reminder gets set opposite to what it currently is
     // double click - turn on/turn off reminder
     task.reminder  = !task.reminder;
-    console.log(task.reminder);
+    // to update value in db
+    this.taskService.updateTaskReminder(task).subscribe();
+    //console.log(task.reminder);
   }
 }
