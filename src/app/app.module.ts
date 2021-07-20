@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -22,7 +23,8 @@ import { AddTaskComponent } from './components/add-task/add-task.component';
   imports: [
     BrowserModule,
     FontAwesomeModule, // This is for importing the module for fontawesome
-    HttpClientModule // imports HttpClientModule
+    HttpClientModule, // imports HttpClientModule
+    FormsModule // import this for using ngModel for 2 way biding between form input and property
   ],
   providers: [],
   bootstrap: [AppComponent]
