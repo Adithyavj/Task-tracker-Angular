@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Task } from 'src/app/Task';
-import { TASKS } from 'src/app/mock-tasks'; 
+import { TaskService } from 'src/app/services/task.service';
 
 @Component({
   selector: 'app-tasks',
@@ -10,10 +10,12 @@ import { TASKS } from 'src/app/mock-tasks';
 export class TasksComponent implements OnInit {
 
   // assign a property tasks as an array of Task[] - interface and give it the values from TASKS
-  tasks: Task[] = TASKS;
-  constructor() { }
+  tasks: Task[] = [];
+  // to use the service we have to pass it as argument in the constructor
+  constructor(private taskService: TaskService) { }
 
   ngOnInit(): void {
+    this.tasks = this.taskService.getTasks();
   }
 
 }
