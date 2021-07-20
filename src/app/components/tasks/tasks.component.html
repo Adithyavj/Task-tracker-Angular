@@ -1,3 +1,6 @@
 <!-- loop through the task - array of tasks and display its text value -->
-<app-task-item *ngFor="let task of tasks"
-[task]="task"></app-task-item>
+<app-task-item 
+    *ngFor="let task of tasks"
+    [task]="task"
+    (onDeleteTask)="deleteTask(task)"
+></app-task-item>
