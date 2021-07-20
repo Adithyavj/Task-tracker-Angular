@@ -1,4 +1,4 @@
-<app-add-task></app-add-task>
+<app-add-task (onAddTask)="addTask($event)"></app-add-task>
 
 <!-- loop through the task - array of tasks and display its text value -->
 <app-task-item 
