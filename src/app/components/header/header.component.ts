@@ -16,6 +16,7 @@ export class HeaderComponent implements OnInit {
   // to use service we add it in ctor
   // we also need to access router here so, we add it in ctor
   constructor(private uiService: UiService, private router: Router) {
+    this.showAddTask = false;
     this.subscription = this.uiService.onToggle().subscribe(value => this.showAddTask = value);
   }
 
