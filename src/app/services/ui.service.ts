@@ -20,7 +20,7 @@ export class UiService {
   }
 
   // fires off when we toggle
-  ontoggle(): Observable<any> {
+  onToggle(): Observable<any> {
     return this.subject.asObservable();
   }
 }
