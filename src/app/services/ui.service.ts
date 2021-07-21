@@ -19,6 +19,7 @@ export class UiService {
     this.subject.next(this.showAddTask);
   }
 
+  // fires off when we toggle
   ontoggle(): Observable<any> {
     return this.subject.asObservable();
   }
